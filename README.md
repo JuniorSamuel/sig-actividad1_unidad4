@@ -1,3 +1,7 @@
+# Unidad 4 - Actividad 1 
+Mapa de Muertes Accidentales y Violentas el 2023. Clase Sistemas de Informacion Geografica.
+# Codigo
+``` r 
 #instalar paquetes 
 install.packages("ggplot2") 
 install.packages("sf") 
@@ -12,10 +16,9 @@ library(readr)
 library(dplyr)
 library(ggspatial)
 # Cargar datos estadisticos
-url <- "https://www.one.gob.do/catalogo-datos/MAV-SUICIDIO/2007-2023/BD_SUICIDIOS_2007-2023.csv"  # Reemplaza esta URL con la URL del archivo CSV
+#url <- "https://www.one.gob.do/catalogo-datos/MAV-SUICIDIO/2007-2023/BD_SUICIDIOS_2007-2023.csv"  # Reemplaza esta URL con la URL del archivo CSV
 archivo <- "archivo.csv"  # Especifica el nombre del archivo de destino
-download.file(url, archivo, mode = "wb")
-
+#download.file(url, archivo, mode = "wb")
 datos <- read.csv(archivo, header = TRUE, sep=",", stringsAsFactors = FALSE)
 
 # Cargar archivo shapefile
@@ -61,8 +64,4 @@ plot +
   annotation_north_arrow(location = "tr", which_north = "true", 
                          pad_x = unit(0.75, "in"), pad_y = unit(0.75, "in"), 
                          style = north_arrow_fancy_orienteering)
-
-#remove.packages("ggplot2") 
-#remove.packages("sf") 
-#remove.packages("readr")
-#rm(list = ls())
+```
